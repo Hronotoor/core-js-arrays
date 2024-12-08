@@ -21,7 +21,7 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  return Array.from({ length: end - start + 1 }, (_, index) => start + index);
+  return Array.from(new Array(end - start + 1), (el, i) => start + i);
 }
 
 /**
@@ -98,7 +98,7 @@ function removeFalsyValues(/* arr */) {
  * @return {array} - The array of string lengths.
  *
  * @example
- *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
+ *    getStringsLength([ '', 'a', 'bc', 'def', 'gaia' ]) => [ 0, 1, 2, 3, 4 ]
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
 function getStringsLength(/* arr */) {
@@ -247,7 +247,7 @@ function distinct(/* arr */) {
 /**
  * Creates an n-dimensional array and fills it with zeros.
  *
- * @param {number} n - Depth of outter array (n > 0).
+ * @param {number} n - Depth of outer array (n > 0).
  * @param {number} size - Length of all arrays (size > 0).
  * @return {array} - The n-dimensional array filled with zeros.
  *
@@ -298,7 +298,7 @@ function selectMany(/* arr, childrenSelector */) {
  * Expenses may be greater than income.
  * You need to calculate the final balance.
  *
- * @param {array} arr - The input array [[income, expence], ...]
+ * @param {array} arr - The input array [[income, expense], ...]
  * @return {number} - The final balance.
  *
  * @example
@@ -462,7 +462,7 @@ function findCommonElements(/* arr1, arr2 */) {
 /**
  * Finds the length of the longest increasing subsequence of a given array of integers.
  *
- * @param {array} nums - The array of integers.
+ * @param {array} num - The array of integers.
  * @return {number} - The length of the longest increasing subsequence.
  *
  * @example
@@ -470,7 +470,7 @@ function findCommonElements(/* arr1, arr2 */) {
  *    findLongestIncreasingSubsequence([3, 10, 2, 1, 20]) => 2
  *    findLongestIncreasingSubsequence([50, 3, 10, 7, 40, 80]) => 3
  */
-function findLongestIncreasingSubsequence(/* nums */) {
+function findLongestIncreasingSubsequence(/* num */) {
   throw new Error('Not implemented');
 }
 
